@@ -499,7 +499,10 @@ h1 em {
   animation: marquee 18s linear infinite;
 }
 .marquee-inner:hover { animation-play-state: paused; }
-@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+@keyframes marquee { 
+  from { transform: translateX(0); } 
+  to { transform: translateX(-50%); } 
+}
 .marquee-item {
   font-size: 13px;
   font-family: var(--mono);
