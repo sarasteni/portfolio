@@ -135,7 +135,7 @@ h2.section-title {
 }
 .hero-eyebrow span { color: var(--violet); }
 h1 {
-  font-size: clamp(48px, 8vw, 96px);
+  font-size: clamp(36px, 8vw, 96px);
   font-weight: 800;
   line-height: 1.0;
   letter-spacing: -0.03em;
@@ -363,6 +363,9 @@ h1 em {
   display: flex; align-items: center; gap: 10px;
 }
 .overlay-section-title::after { content: ''; flex:1; height:1px; background: var(--border); }
+.overlay-label { font-family: var(--mono); font-size: 11px; color: var(--violet); letter-spacing: 0.1em; margin-bottom: 10px; }
+.overlay-title { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; color: var(--text); }
+.overlay-subtitle { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
 .overlay-text { color: var(--muted); font-size: 15px; line-height: 1.9; }
 .overlay-steps { display: flex; flex-direction: column; gap: 16px; margin-top: 4px; }
 .overlay-step {
@@ -718,4 +721,5 @@ footer {
   .about-right { width: 100%; }
   .about-photo { width: 100%; height: auto; aspect-ratio: 3/4; }
   .about-stats { grid-template-columns: 1fr 1fr; }
-}
+  h1 { font-size: clamp(32px, 10vw, 56px); }
+} 
