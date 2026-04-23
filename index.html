@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sara — Web Developer & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-logo"><span>{ </span>sara.dev<span> }</span></div>
+    <nav>
+      <a href="#home" class="active">_home</a>
+      <a href="#about">_about</a>
+      <a href="#portfolio">_portfolio</a>
+      <a href="#services">_services</a>
+      <a href="#resume">_resume</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb"></div>
+    <p class="hero-eyebrow">// hi, ich bin <span>Sara</span> — aus Graz, Österreich</p>
+    <h1>Web<br><em>Developer</em><br>&amp; Designer.</h1>
+    <div class="hero-typed-wrap">
+      I build <span id="typed"></span>
+    </div>
+    <p class="hero-desc">
+      Ich glaube daran, dass gutes Design spürbar ist – es macht Dinge klarer, einfacher und besser.
+    </p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn-primary">{ meine_projekte }</a>
+      <a href="#contact" class="btn-ghost">{ kontakt }</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span class="scroll-line"></span>
+      scroll to explore
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <p class="section-tag">_about_me</p>
+        <h2 class="section-title">&lt;about_me /&gt;</h2>
+        <div class="about-text fade-in">
+          <p>Ich bin Sara — eine <strong>Web Developerin & Designerin</strong> aus Graz mit Leidenschaft für sauberen Code und durchdachtes Design. Ich kombiniere technisches Know-how mit ästhetischem Gespür.</p>
+          <p>Mein Fokus liegt auf <strong>User Experience</strong>, Performance und modernen Technologien. Digitale Erlebnisse, die bleiben.</p>
+        </div>
+        <div class="skills-grid fade-in">
+          <div class="skill-item">HTML & CSS</div>
+          <div class="skill-item">JavaScript</div>
+          <div class="skill-item">Wordpress</div>
+          <div class="skill-item">PHP & vue.js</div>
+          <div class="skill-item">Figma</div>
+          <div class="skill-item">Git & GitHub</div>
+          <div class="skill-item">UI/UX Design</div>
+          <div class="skill-item">Responsive Design</div>
+        </div>
+      </div>
+      <div class="about-right">
+        <div class="about-image-wrap">
+          <img src="/portfolio/assets/img/IMG_4478.JPG" alt="Sara" class="about-photo" />
+          <div class="about-accent"></div>
+        </div>
+        <div class="about-stats fade-in">
+          <div class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Jahre Erfahrung</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5</div>
+            <div class="stat-label">umgesetzte Ideen</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">UX-Optimierungen</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Kaffee getrunken</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <p class="section-tag">_portfolio</p>
+    <h2 class="section-title">&lt;my_work /&gt;</h2>
+    <div class="portfolio-filter">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">{ all }</button>
+      <button class="filter-btn" onclick="filterProjects('ui', this)">{ ui/ux }</button>
+      <button class="filter-btn" onclick="filterProjects('grafik', this)">{ grafik_design }</button>
+      <button class="filter-btn" onclick="filterProjects('print', this)">{ print }</button>
+    </div>
+    <div class="portfolio-grid" id="portfolio-grid">
+
+      <div class="project-card fade-in" data-cat="ui" onclick="openOverlay('sdk')">
+        <div class="project-img" style="background:#000;">
+          <img src="/portfolio/assets/img/Kundenportal.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Kundenportal SDK" />
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">UI/UX</span><span class="tag">Figma</span>
+          </div>
+          <h3 class="project-title">{ Kundenportal }</h3>
+          <p class="project-desc">// Komplexes UI/UX-Projekt für ein Kundenportal — von der Research-Phase bis zum fertigen Prototyp.</p>
+          <button class="project-link">{ case_study } →</button>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-cat="grafik" onclick="openOverlay('logo')">
+        <div class="project-img" style="background:#1a1a1a;">
+          <img src="/portfolio/assets/img/Visitenkarte.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Branding Logopädin" />
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">Grafik Design</span><span class="tag">Branding</span><span class="tag">Print</span>
+          </div>
+          <h3 class="project-title">{ Branding Logopädin }</h3>
+          <p class="project-desc">// Logo & Visitenkarte für eine Grazer Logopädin — ruhiges, vertrauenswürdiges Branding mit Wohlfühlcharakter.</p>
+          <button class="project-link">{ case_study } →</button>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-cat="ui" onclick="openOverlay('ablese')">
+        <div class="project-img" style="background:#0a0a12;">
+          <img src="/portfolio/assets/img/AbleseApp_login.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Ablese App" />
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">UI/UX</span><span class="tag">Mobile App</span><span class="tag">Figma</span>
+          </div>
+          <h3 class="project-title">{ Zählerstand Ablese App }</h3>
+          <p class="project-desc">// Mobile App für Zählerstandsablesung — intuitive Erfassung, Barcode-Scan und Routen-Management für Außendienstmitarbeiter.</p>
+          <button class="project-link">{ case_study } →</button>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-cat="print grafik" onclick="openOverlay('kalender')">
+        <div class="project-img" style="background:#2a2a2a;">
+          <img src="/portfolio/assets/img/Kalender.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Feuerwehr Kalender" />
+          <div class="project-img-overlay"></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">Print Design</span><span class="tag">Kollaboration</span><span class="tag">Layout</span>
+          </div>
+          <h3 class="project-title">{ Feuerwehr Kalender }</h3>
+          <p class="project-desc">// Jahreskalender der Berufsfeuerwehr in Kollaboration mit einem Fotografen — Print-Design & Bildlayout.</p>
+          <button class="project-link">{ case_study } →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECT OVERLAY -->
+  <div class="project-overlay" id="overlay" onclick="closeOverlayBackdrop(event)">
+    <div class="overlay-backdrop"></div>
+    <div class="overlay-panel">
+
+      <!-- Projekt 1: SDK -->
+      <div class="overlay-content" id="overlay-sdk" style="display: none;">
+        <div class="overlay-header">
+          <div>
+            <div class="overlay-label">UI/UX · Figma</div>
+            <h2 class="overlay-title">{ Kundenportal — Energie & Versorgung }</h2>
+            <p class="overlay-subtitle">Ein Self-Service-Portal für Endkunden — Strom, Gas und Heizung auf einen Blick.</p>
+          </div>
+          <button class="overlay-close" onclick="closeOverlay()">✕</button>
+        </div>
+        <div class="overlay-body">
+          <div class="overlay-cover" style="padding:0;overflow:hidden;">
+            <img src="/portfolio/assets/img/Mockup-mobil.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Kundenportal SDK Preview" />
+          </div>
+          <div class="overlay-section-title">// kontext</div>
+            <p class="overlay-text">Im Rahmen meiner Tätigkeit bei SDK habe ich das Kundenportal für Endkunden eines Energieversorgers designed. Das Portal ermöglicht es Kunden, alle relevanten 
+              Informationen rund um Strom, Gas und Heizung selbstständig einzusehen und zu verwalten — von der Verbrauchsstatistik über den Teilzahlungsbetrag bis hin zu Rechnungen, Anlagendaten und 
+              Nachrichten. Die Herausforderung: eine Vielzahl an Menüpunkten so zu strukturieren, dass sie für alle Nutzergruppen intuitiv erreichbar sind.</p>
+              <div class="overlay-section-title">// case_study</div>
+          <div class="overlay-steps">
+            <div class="overlay-step">
+              <div class="overlay-step-num">01</div>
+              <div class="overlay-step-content">
+                <h4>The problem</h4>
+                <p>Zwar existierten bereits Kundenportale des Energieversorgers, diese waren jedoch wenig intuitiv und für viele Nutzer schwer verständlich. Eine zentrale, wirklich nutzerfreundliche 
+                  digitale Anlaufstelle fehlte. Fragen zu Verbrauch, Rechnungen oder Teilzahlungen wurden daher weiterhin häufig direkt an den Kundenservice gerichtet. Gleichzeitig musste das Portal 
+                  eine sehr breite Zielgruppe ansprechen — von jungen, digital-affinen Nutzern bis hin zu älteren Kunden ohne technische Vorkenntnisse.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">02</div>
+              <div class="overlay-step-content">
+                <h4>My solution</h4>
+                <p>Eine klare Dashboard-Struktur mit Widgets für Verbrauch, offene Zahlungen, letzte Rechnung und Nachrichten. Quicklinks für häufig genutzte Funktionen. Die Navigation wurde so 
+                  gestaltet, dass auch komplexe Bereiche in wenigen Klicks erreichbar sind — ohne Überforderung.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">03</div>
+              <div class="overlay-step-content">
+                <h4>The result</h4>
+                <p>Low-Fidelity Wireframes in Figma für alle Screens. Fokus auf Dichtigkeit der Information ohne Überforderung. Das Portal deckt alle relevanten Anwendungsfälle ab und gibt 
+                  Endkunden eine übersichtliche, eigenständige Verwaltung ihrer Energieverträge.</p>
+              </div>
+            </div>
+          </div>
+          <div class="overlay-section-title">// tools_verwendet</div>
+          <div class="overlay-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">FigJam</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 2: Logopädin -->
+      <div class="overlay-content" id="overlay-logo" style="display: none;">
+        <div class="overlay-header">
+          <div>
+            <div class="overlay-label">Grafik Design · Branding · Print</div>
+            <h2 class="overlay-title">{ Branding Logopädin }</h2>
+            <p class="overlay-subtitle">Logo & Visitenkarte für eine Grazer Logopädin — warm, vertrauenswürdig, professionell.</p>
+          </div>
+          <button class="overlay-close" onclick="closeOverlay()">✕</button>
+        </div>
+        <div class="overlay-body">
+          <div class="overlay-cover" style="padding:0;overflow:hidden;">
+            <img src="/portfolio/assets/img/Business_Card.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Branding Logopädin Preview" />
+          </div>
+          <div class="overlay-section-title">// kontext</div>
+          <p class="overlay-text">Eine selbstständige Logopädin und Stillberaterin aus Graz suchte ein professionelles Erscheinungsbild für ihre Praxis. Der Auftrag: Entwicklung eines Logos und 
+            einer Visitenkarte, die fachliche Kompetenz und gleichzeitig eine warme, vertrauensvolle Ausstrahlung vermitteln — insbesondere im sensiblen Bereich der Arbeit mit Babys und jungen 
+            Familien.</p>
+          <div class="overlay-section-title">// denkprozess</div>
+          <div class="overlay-steps">
+            <div class="overlay-step">
+              <div class="overlay-step-num">01</div>
+              <div class="overlay-step-content">
+                <h4>Briefing & Moodboard</h4>
+                <p>Ausführliches Gespräch zur Zielgruppe (Babys, Erwachsene, Eltern), zu Konkurrenz und zu persönlichen Präferenzen. Erstellung von Moodboards mit unterschiedlichen Richtungen: 
+                  organisch-warm, clean-medizinisch, spielerisch.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">02</div>
+              <div class="overlay-step-content">
+                <h4>Logoentwicklung</h4>
+                <p>Skizzenphase mit mehreren ausgearbeiteten Konzepten, die auch digital visualisiert wurden. Gewählt wurde schließlich ein Ansatz mit einem reduzierten Logo, das eine Mutter mit 
+                  Baby zeigt und Nähe sowie Geborgenheit vermittelt. Kombiniert wurde dieses mit einer ruhigen, eleganten Serifenschrift. Die Farbpalette aus warmem Altrosa und Creme 
+                  unterstreicht die sanfte, vertrauensvolle Wirkung des Erscheinungsbildes.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">03</div>
+              <div class="overlay-step-content">
+                <h4>Visitenkarte</h4>
+                <p>Layout in InDesign, beidseitig. Vorderseite: Logo + Name + Titel, Rückseite: Kontaktdaten in klarer Typografie. Papier: 350g/m² matt mit selektivem UV-Lack auf dem Logo. 
+                  Abstimmung mit Druckerei zu Toleranzen und Farbprofil (ISO Coated v2).</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">04</div>
+              <div class="overlay-step-content">
+                <h4>Finalisierung & Übergabe</h4>
+                <p>Übergabe als druckfertiges PDF (CMYK, Beschnitt + Anschnitt), SVG und PNG-Varianten. Brand Guidelines Dokument mit Farbcodes, Schriften und Verwendungsregeln.</p>
+              </div>
+            </div>
+          </div>
+          <div class="overlay-section-title">// tools_verwendet</div>
+          <div class="overlay-tools">
+            <span class="tag">Adobe Illustrator</span>
+            <span class="tag">InDesign</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 4: Ablese App -->
+      <div class="overlay-content" id="overlay-ablese" style="display: none;">
+        <div class="overlay-header">
+          <div>
+            <div class="overlay-label">UI/UX · Mobile App · Figma</div>
+            <h2 class="overlay-title">{ Zählerstand Ablese App }</h2>
+            <p class="overlay-subtitle">Mobile App für Außendienstmitarbeiter — Zählerstände erfassen, scannen, abschließen.</p>
+          </div>
+          <button class="overlay-close" onclick="closeOverlay()">✕</button>
+        </div>
+        <div class="overlay-body">
+          <div class="overlay-cover" style="padding:0;overflow:hidden;">
+            <img src="/portfolio/assets/img/AbleseApp_detail.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Ablese App Login" />
+          </div>
+          <div class="overlay-section-title">// kontext</div>
+          <p class="overlay-text">Die Ablese App wurde für Außendienstmitarbeiter eines Energieversorgers entwickelt. Ziel war eine mobile Lösung, mit der Mitarbeiter vor Ort Zählerstände 
+            schnell und fehlerfrei erfassen können — per manuellem Eintrag oder Barcode-Scan. Die App integriert Routen-Management, Adresslisten und eine übersichtliche Detailansicht pro Zähler.</p>
+          <div class="overlay-section-title">// denkprozess</div>
+          <div class="overlay-steps">
+            <div class="overlay-step">
+              <div class="overlay-step-num">01</div>
+              <div class="overlay-step-content">
+                <h4>Nutzeranalyse & Anforderungen</h4>
+                <p>Interviews mit Außendienstmitarbeitern zur Analyse ihres Arbeitsalltags. Kernproblem: bisherige Lösung war fehleranfällig und zu langsam. Ableitung von 3 User Stories: 
+                  Route starten, Zähler ablesen, Bericht abschließen.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">02</div>
+              <div class="overlay-step-content">
+                <h4>Userflow & Navigation</h4>
+                <p>Entwicklung eines klaren 4-Screen-Flows: Login → Routen → Adressliste → Ablesung. Bottom Navigation für schnellen Wechsel zwischen Bereichen. Barcode-Scan als primäre 
+                  Eingabemethode priorisiert.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">03</div>
+              <div class="overlay-step-content">
+                <h4>Wireframes & Prototyp</h4>
+                <p>Lo-Fi Wireframes für alle Screens, danach Hi-Fi Design in Figma. Klickbarer Prototyp für den kompletten Ablese-Flow inkl. Barcode-Scan-Simulation und Fehlerbehandlung bei 
+                  falschem Zähler.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">04</div>
+              <div class="overlay-step-content">
+                <h4>UI Design</h4>
+                <p>Klares, kontrastreiches Design für den Außeneinsatz (Sonne, Handschuhe). Große Touch-Targets, minimale Texteingabe, deutliche Statusanzeigen.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="overlay-section-title">// tools_verwendet</div>
+          <div class="overlay-tools">
+            <span class="tag">Figma</span>
+            <span class="tag">FigJam</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">iOS Guidelines</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projekt 3: Feuerwehr Kalender -->
+      <div class="overlay-content" id="overlay-kalender" style="display: none;">
+        <div class="overlay-header">
+          <div>
+            <div class="overlay-label">Print Design · Layout · Kollaboration</div>
+            <h2 class="overlay-title">{ Jahreskalender Berufsfeuerwehr Graz }</h2>
+            <p class="overlay-subtitle">Jahreskalender in Kollaboration mit einem Fotografen — er die Bilder, ich das Design.</p>
+          </div>
+          <button class="overlay-close" onclick="closeOverlay()">✕</button>
+        </div>
+        <div class="overlay-body">
+          <div class="overlay-cover" style="padding:0;overflow:hidden;">
+            <img src="/portfolio/assets/img/Kalender.png" style="width:100%;height:100%;object-fit:cover;display:block;" alt="Feuerwehr Kalender Preview" />
+          </div>
+          <div class="overlay-section-title">// kontext</div>
+          <p class="overlay-text">Ich übernahm das komplette Print-Design: Layout, Typografie, Farbkonzept und druckfähige Aufbereitung des Kalenders.</p>
+          <div class="overlay-section-title">// denkprozess</div>
+          <div class="overlay-steps">
+            <div class="overlay-step">
+              <div class="overlay-step-num">01</div>
+              <div class="overlay-step-content">
+                <h4>Konzept & Abstimmung</h4>
+                <p>Gemeinsame Planung der Bildauswahl (12 Hauptbilder + Cover) und des Formats: A3 hoch, Ringbindung, 14 Seiten (Cover + 12 Monate + Rückseite). Stimmung: kraftvoll.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">02</div>
+              <div class="overlay-step-content">
+                <h4>Bildbearbeitung & Farbkorrektur</h4>
+                <p>Farbkonsistenz über alle 13 Bilder herstellen — verschiedene Lichtsituationen (Nacht, Tageslicht, Gegenlicht). Einheitliches Color-Grading in Lightroom, Export in CMYK für Druck.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">03</div>
+              <div class="overlay-step-content">
+                <h4>Layout & Typografie</h4>
+                <p>Monatslayouts in InDesign: Bild dominiert 2/3 der Seite, Kalenderraster im unteren Drittel. Schriftenwahl: kondensierte Groteskschrift für Monatsnamen, 
+                  klare Tabelle für Tage.</p>
+              </div>
+            </div>
+            <div class="overlay-step">
+              <div class="overlay-step-num">04</div>
+              <div class="overlay-step-content">
+                <h4>Druckvorbereitung & Produktion</h4>
+                <p>Preflight-Check in Acrobat, Farbprofil ISO Coated v2, alle Bilder mind. 300 dpi. Abstimmung mit der Druckerei zu Heftrandbreite und Farbproof.</p>
+              </div>
+            </div>
+          </div>
+          <div class="overlay-section-title">// tools_verwendet</div>
+          <div class="overlay-tools">
+            <span class="tag">Adobe InDesign</span>
+            <span class="tag">Lightroom</span>
+            <span class="tag">Illustrator</span>
+            <span class="tag">Acrobat</span>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <p class="section-tag">_services</p>
+    <h2 class="section-title">&lt;what_i_do /&gt;</h2>
+    <div class="marquee-wrap">
+      <div class="marquee-inner">
+        <span class="marquee-item"><span class="marquee-dot"></span>Web Development</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Responsive Design</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Frontend Architecture</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Branding</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Prototyping</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Performance Optimization</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Web Development</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>UI/UX Design</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Responsive Design</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Frontend Architecture</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Branding</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Prototyping</span>
+        <span class="marquee-item"><span class="marquee-dot"></span>Performance Optimization</span>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-num">// 01</div>
+        <h3 class="service-title">Web Design</h3>
+        <p class="service-desc">Visuelle Konzepte, die deine Marke zum Leben erwecken — von Wireframes bis zum finalen Design in Figma.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-num">// 02</div>
+        <h3 class="service-title">UI/UX Design</h3>
+        <p class="service-desc">Nutzerfreundliche Interfaces, die Spaß machen. Durchdachte Nutzererlebnisse, die Bedürfnisse verstehen und digitale Produkte einfach, logisch und angenehm nutzbar machen.</p>
+      </div>
+            <div class="service-card fade-in">
+        <div class="service-num">// 03</div>
+        <h3 class="service-title">Frontend Development</h3>
+        <p class="service-desc">Sauberer, performanter Code mit HTML, CSS, JavaScript und Vue. Pixel-perfekte Umsetzung von Designs.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-num">// 04</div>
+        <h3 class="service-title">Print Design</h3>
+        <p class="service-desc">Gestaltung hochwertiger Drucksorten wie Visitenkarten, Flyer und Broschüren — abgestimmt auf deine Marke bis ins Detail.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <p class="section-tag">_resume</p>
+    <h2 class="section-title">&lt;experience /&gt;</h2>
+    <div class="resume-layout">
+      <div>
+        <div class="resume-col-title">Berufserfahrung</div>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">Februar 2025 — heute</div>
+            <div class="timeline-role">Web Developerin & UI/UX Designerin</div>
+            <div class="timeline-company">// SDK GmbH · Graz</div>
+            <p class="timeline-desc">Entwicklung moderner Webanwendungen mit Vue.js und JavaScript. Weiterentwicklung bestehender Systeme mit PHP. Design des neuen Kundenportals und einer Ablese-App mit Fokus auf UX (Figma).</p>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">März 2023 — Juli 2024</div>
+            <div class="timeline-role">Website & Content Creator</div>
+            <div class="timeline-company">// KPTN Marketing · Graz</div>
+            <p class="timeline-desc">Erstellung und Konfiguration von Shopify-Websites. Anpassung von Themes und Implementierung von Features. Entwicklung von Content-Strategien und zielgerichteten Kampagnen.</p>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">Mai 2022 — März 2023</div>
+            <div class="timeline-role">Content Creator</div>
+            <div class="timeline-company">// Studo · Graz</div>
+            <p class="timeline-desc">Social Media Betreuung für AT und DE. Content Erstellung (Video) und Design mit Figma.</p>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">Mai 2021 — Mai 2022</div>
+            <div class="timeline-role">Website & Design</div>
+            <div class="timeline-company">// Tonweber · Graz</div>
+            <p class="timeline-desc">Entwicklung und Wartung von WordPress-Websites. Erstellung individueller Themes mit HTML, CSS und JavaScript. Gestaltung digitaler und Printmedien mit Adobe CC.</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="resume-col-title">Ausbildung</div>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-role">Diplomlehrgang Web Developer</div>
+            <div class="timeline-company">// WIFI Steiermark</div>
+            <p class="timeline-desc">Vertiefung in modernen Web-Technologien mit Fokus auf Frontend-Entwicklung und agile Methoden.</p>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">2021 — 2023</div>
+            <div class="timeline-role">Bachelor of Arts — Mediendesign</div>
+            <div class="timeline-company">// IU Internationale Hochschule</div>
+            <p class="timeline-desc">Studium mit Schwerpunkten in digitalem Design, UX/UI und Medienproduktion.</p>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="timeline-date">2016</div>
+            <div class="timeline-role">Matura — Kreativzweig</div>
+            <div class="timeline-company">// BG/BRG Klusemannstraße · Graz</div>
+            <p class="timeline-desc">Matura mit kreativem Schwerpunkt — Grundlage für den späteren Weg in Design und Entwicklung.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Sara — Web Developer & Designer</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
