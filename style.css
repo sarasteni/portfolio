@@ -724,5 +724,5 @@ footer {
   .about-right { width: 100%; }
   .about-photo { width: 100%; height: auto; aspect-ratio: 3/4; }
   .about-stats { grid-template-columns: 1fr 1fr; }
-  h1 { font-size: clamp(28px, 9vw, 56px); }
+  h1 { font-size: clamp(28px, 8vw, 56px); }
 } 
